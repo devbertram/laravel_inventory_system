@@ -1,7 +1,7 @@
 <header class="main-header">
   <a href="#" class="logo">
-    <span class="logo-mini">H</span>
-    <span class="logo-lg">Herbanext</span>
+    <span class="logo-mini">I</span>
+    <span class="logo-lg">INVENTORY</span>
   </a>
   <nav class="navbar navbar-static-top">
     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -14,22 +14,14 @@
       <ul class="nav navbar-nav">
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            @if (isset(Auth::user()->avatar_location))
-              <img src="{{ route('dashboard.profile.view_avatar', Auth::user()->slug) }}" class="user-image" alt="User Image">
-            @else
-              <img src="{{ asset('images/avatar.jpeg') }}" class="user-image" alt="User Image">
-            @endif
+            <img src="{{ asset('images/avatar.jpeg') }}" class="user-image" alt="User Image">
             @if(Auth::check())
               {{ __sanitize::html_encode(Auth::user()->firstname) }}
             @endif
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
-              @if (isset(Auth::user()->avatar_location))
-                <img src="{{ route('dashboard.profile.view_avatar', Auth::user()->slug) }}" class="img-circle" alt="User Image">
-              @else
-                <img src="{{ asset('images/avatar.jpeg') }}" class="img-circle" alt="User Image">
-              @endif
+              <img src="{{ asset('images/avatar.jpeg') }}" class="img-circle" alt="User Image">
               <p>
                 @if(Auth::check())
                   {{ __sanitize::html_encode(Auth::user()->firstname) .' '. __sanitize::html_encode(Auth::user()->lastname) }}

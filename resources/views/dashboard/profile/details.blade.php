@@ -14,16 +14,9 @@
 
       <div class="box box-default">
         <div class="box-body box-profile">
-            
-          @if (isset(Auth::user()->avatar_location))
-            <img class="profile-user-img img-responsive img-circle" 
-                 src="{{ route('dashboard.profile.view_avatar', Auth::user()->slug) }}" 
-                 alt="User profile picture">
-          @else
             <img class="profile-user-img img-responsive img-circle" 
                  src="{{asset('images/avatar.jpeg')}}" 
                  alt="User profile picture">
-          @endif
 
           <h3 class="profile-username text-center">{{ Auth::check() ? Auth::user()->fullname : '' }}</h3>
 

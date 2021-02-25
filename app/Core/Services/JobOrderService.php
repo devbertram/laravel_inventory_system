@@ -5,10 +5,6 @@ namespace App\Core\Services;
 use App\Core\Interfaces\PurchaseOrderInterface;
 use App\Core\Interfaces\PurchaseOrderItemInterface;
 use App\Core\Interfaces\JobOrderInterface;
-use App\Core\Interfaces\ManufacturingOrderInterface;
-use App\Core\Interfaces\ManufacturingOrderRawMatInterface;
-use App\Core\Interfaces\FinishingOrderInterface;
-use App\Core\Interfaces\FinishingOrderPackMatInterface;
 use App\Core\BaseClasses\BaseService;
 
 
@@ -18,21 +14,13 @@ class JobOrderService extends BaseService{
     protected $po_repo;
     protected $po_item_repo;
     protected $job_order_repo;
-    protected $manufacturing_order_repo;
-    protected $mo_raw_mat_repo;
-    protected $finishing_order_repo;
-    protected $fo_pack_mat_repo;
 
 
-    public function __construct(PurchaseOrderInterface $po_repo, PurchaseOrderItemInterface $po_item_repo, JobOrderInterface $job_order_repo, ManufacturingOrderInterface $manufacturing_order_repo, ManufacturingOrderRawMatInterface $mo_raw_mat_repo, FinishingOrderInterface $finishing_order_repo, FinishingOrderPackMatInterface $fo_pack_mat_repo){
+    public function __construct(PurchaseOrderInterface $po_repo, PurchaseOrderItemInterface $po_item_repo, JobOrderInterface $job_order_repo){
 
         $this->po_repo = $po_repo;
         $this->po_item_repo = $po_item_repo;
         $this->job_order_repo = $job_order_repo;
-        $this->manufacturing_order_repo = $manufacturing_order_repo;
-        $this->mo_raw_mat_repo = $mo_raw_mat_repo;
-        $this->finishing_order_repo = $finishing_order_repo;
-        $this->fo_pack_mat_repo = $fo_pack_mat_repo;
         parent::__construct();
 
     }

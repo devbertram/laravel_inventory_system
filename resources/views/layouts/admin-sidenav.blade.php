@@ -2,11 +2,7 @@
   <section class="sidebar">
     <div class="user-panel">
       <div class="pull-left image">
-        @if (isset(Auth::user()->avatar_location))
-          <img src="{{ route('dashboard.profile.view_avatar', Auth::user()->slug) }}" class="img-circle" alt="User Image">
-        @else
-          <img src="{{ asset('images/avatar.jpeg') }}" class="img-circle" alt="User Image">
-        @endif
+        <img src="{{ asset('images/avatar.jpeg') }}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         

@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HERBANEXT</title>
+  <title>LARAVEL-INVENTORY</title>
     <link rel="shortcut icon" href="{{ asset('icon.png') }}">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -42,7 +42,7 @@
 
 	<div class="login-box">
 	  <div class="login-logo">
-	    <span style="font-size: 35px;">Herbanext Portal</span>
+	    <span style="font-size: 35px;">LARAVEL-INVENTORY</span>
 	  </div>
 
 		@if(Session::has('AUTH_AUTHENTICATED'))
@@ -76,6 +76,8 @@
 		@if(Session::has('LOGOUT_SUCCESS'))
 			{!! __html::alert('success', '<i class="icon fa fa-check"></i> Success!', Session::get('LOGOUT_SUCCESS')) !!}
 		@endif
+
+		{!! __html::alert('success', 'Default User', 'Username:admin <br>Password:123456') !!}
 
 		<div class="login-box-body">
 			<p class="login-box-msg">Sign in to start your session</p>

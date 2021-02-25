@@ -2,6 +2,7 @@
 Inventory System with Purchase Order, Job Order, Delivery and Task Scheduling.
 
 Technologies: Laravel-5.6, MySql, Redis
+
 Bootstrap Template: AdminLTE
 
 Installation:
